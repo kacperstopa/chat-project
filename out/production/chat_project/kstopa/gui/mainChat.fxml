@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="borderPane" pickOnBounds="false" prefHeight="651.0" prefWidth="354.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kstopa.gui.MainChatController">
+   <center>
+      <TextArea fx:id="messagesText" editable="false" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </center>
+   <bottom>
+      <HBox prefHeight="26.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="insertText" prefHeight="25.0" prefWidth="257.0" HBox.hgrow="ALWAYS" />
+            <Button fx:id="sendButton" defaultButton="true" mnemonicParsing="false" onAction="#sendMessage" prefHeight="39.0" prefWidth="103.0" text="Send" />
+         </children>
+      </HBox>
+   </bottom>
+   <top>
+      <SplitPane dividerPositions="0.6455331412103746" pickOnBounds="false">
+         <items>
+            <MenuBar maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="29.0" prefWidth="220.0">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#quit" text="Close" />
+                        <MenuItem fx:id="saveButton" mnemonicParsing="false" onAction="#saveMessages" text="Save messages" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#showAbout" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <CheckBox fx:id="showTime" mnemonicParsing="false" text="Show time" />
+         </items>
+      </SplitPane>
+   </top>
+</BorderPane>
